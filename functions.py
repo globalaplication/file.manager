@@ -1,9 +1,8 @@
-from config import Load
 import os
+from config import Load
 HOME = os.environ['HOME']
 def touchplaces():
         places = Load("/var/tmp/places")
-        userdirs = []
         with open ("{}{}".format(HOME, "/.config/user-dirs.dirs")) as dirs:
                 lines = dirs.read()
         for test in lines.splitlines():
@@ -16,4 +15,3 @@ def touchplaces():
                                 "{},{},{}".format(os.path.basename(dir), 
                                 "Folder", 
                                 True))
-                        
