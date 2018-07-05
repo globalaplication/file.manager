@@ -1,7 +1,6 @@
 from config import Load
 import os
 HOME = os.environ['HOME']
-
 def touchplaces():
         places = Load("/var/tmp/places")
         userdirs = []
@@ -17,6 +16,4 @@ def touchplaces():
                                 "{},{},{}".format(os.path.basename(dir), 
                                 "Folder", 
                                 True))
-                                
-
-touchplaces()
+                        
